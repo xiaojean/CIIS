@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd"> 
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.multipart.maxSize" value="16777216000"/>
+	
+	<package name="user" extends="struts-default">
+		<action name="goLogin">
+            <result >/admingui/tlogin.jsp</result>
+        </action>
+        <action name="logout" class="loginAction" method="logout"  >
+			<result>/admingui/tlogin.jsp</result>
+		</action>
+        <action name="login" class="LoginAction" method="login">
+        	<result name="success" >/admingui/index_teacher.jsp</result>
+        	<result name="input">/admingui/files/error.jsp</result> 
+        </action>
+        
+        <action name="goTbipc" class="TbipcAction" method="goAddTbipc">
+        	<result name="success" >/admingui/files/ipcall_add.jsp</result>   
+        	<result name="input">/admingui/files/error.jsp</result>      	
+        </action>	
+        <action name="addTbipc" class="AddTbipcAction">        	
+        	<result name="success" type="redirectAction">manageTbipc.action?tbipc.typekey=${tbipc.typekey}</result>	
+        	<result name="input">/admingui/files/error.jsp</result> 
+        </action>	        
+		<action name="viewTbipc" class="TbipcAction" method="viewTbipc">
+			<result name="success">/admingui/files/ipcall_view.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="deleteTbipc" class="TbipcAction" method="deleteTbipc">
+			<result name="success" type="redirectAction">manageTbipc.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="updatePTbipc" class="TbipcAction" method="updatePTbipc">
+			<result name="success" >/admingui/files/ipcall_update.jsp</result>	
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="updateTbipc" class="UpdateTbipcAction" >
+			<result name="success" type="redirectAction">manageTbipc.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="manageTbipc" class="TbipcAction" method="manageTbipc">
+			<result name="success">/admingui/files/ipcall_manage.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="listCgzs" class="TbipcAction" method="listTbipc">
+			<result name="success">/admingui/files/cgzs_list.jsp</result>			
+		</action>
+		<action name="listSzll" class="TbipcAction" method="listTbipc">
+			<result name="success">/admingui/files/szll_list.jsp</result>			
+		</action>
+		<action name="listLrld" class="TbipcAction" method="listLrld">
+			<result name="success">/admingui/files/lrld_list.jsp</result>			
+		</action>
+		<action name="listTpxw" class="TbipcAction" method="listTbipc">
+			<result name="success">/admingui/files/tpxw_list.jsp</result>			
+		</action>
+		<action name="showTbipc" class="TbipcAction" method="showTbipc">
+			<result name="success">/admingui/files/ipcall_show.jsp</result>		
+		</action>		
+		<action name="showTpxw" class="TbipcAction" method="showTbipc">
+			<result name="success">/admingui/files/tpxw_show.jsp</result>		
+		</action>
+		<action name="showLrld" class="TbipcAction" method="showTbipc">
+			<result name="success">/admingui/files/lrld_show.jsp</result>		
+		</action>
+		<action name="showCgzs" class="TbipcAction" method="showTbipc">
+			<result name="success">/admingui/files/cgzs_show.jsp</result>		
+		</action>
+		
+		<action name="goTbteacher" class="TbteacherAction" method="goAddTbteacher">
+        	<result name="success" >/admingui/files/teacher_add.jsp</result> 
+        	<result name="input">/admingui/files/error.jsp</result>    	
+        </action>
+        <action name="manageTbteacher" class="TbteacherAction" method="manageTbteacher">
+        	<result name="success" >/admingui/files/teacher_list.jsp</result> 
+        	<result name="input">/admingui/files/error.jsp</result>        	
+        </action>	
+        <action name="addTbteacher" class="AddTbteacherAction">        	
+        	<result name="success" type="redirectAction">listTbteacher.action</result>	
+        	<result name="input">/admingui/files/error.jsp</result> 
+        </action>
+		<action name="viewTbteacher" class="TbteacherAction" method="viewTbteacher">
+			<result name="success">/admingui/files/teacher_view.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="deleteTbteacher" class="TbteacherAction" method="deleteTbteacher">
+			<result name="success" type="redirectAction">listTbteacher.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="updatePTbteacher" class="TbteacherAction" method="updatePTbteacher">
+			<result name="success" >/admingui/files/teacher_update.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 	
+		</action>
+		<action name="updateTbteacher" class="UpdateTbteacherAction" >
+			<result name="success" type="redirectAction">listTbteacher.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		
+		<action name="listTbteacher" class="TbteacherAction" method="listTbteacher">
+			<result name="success">/admingui/files/teacher_manage.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="moreTbteacher" class="TbteacherAction" method="moreTbteacher">
+			<result name="success">/admingui/files/jsfc_list.jsp</result>
+		
+		</action>
+		<action name="showTbteacher" class="TbteacherAction" method="showTbteacher">
+			<result name="success">/admingui/files/jsfc_show.jsp</result>				
+		</action>
+		
+		<action name="goTbdoc" class="TbdocAction" method="goAddTbdoc">
+        	<result name="success" >/admingui/files/ipcdoc_add.jsp</result>
+        	<result name="input">/admingui/files/error.jsp</result>        	
+        </action>	
+        <action name="addTbdoc" class="AddTbdocAction">        	
+        	<result name="success" type="redirectAction">manageTbdoc.action?tbdoc.typekey=${tbdoc.typekey}</result>	
+        	<result name="input">/admingui/files/error.jsp</result>  
+        </action>	        
+		<action name="viewTbdoc" class="TbdocAction" method="viewTbdoc">
+			<result name="success">/admingui/files/ipcdoc_view.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="deleteTbdoc" class="TbdocAction" method="deleteTbdoc">
+			<result name="success" type="redirectAction">manageTbdoc.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="updatePTbdoc" class="TbdocAction" method="updatePTbdoc">
+			<result name="success" >/admingui/files/ipcdoc_update.jsp</result>	
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="updateTbdoc" class="UpdateTbdocAction" >
+			<result name="success" type="redirectAction">manageTbdoc.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="manageTbdoc" class="TbdocAction" method="manageTbdoc">
+			<result name="success">/admingui/files/ipcdoc_manage.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result>
+		</action>
+		<action name="listXydt" class="TbdocAction" method="listTbdoc">
+			<result name="success">/admingui/files/xydt_list.jsp</result>			
+		</action>
+		<action name="showXygk" class="TbdocAction" method="listTbdoc">
+			<result name="success">/admingui/files/xygk_show.jsp</result>			
+		</action>
+		<action name="listJxzy" class="TbdocAction" method="listTbdoc">
+			<result name="success">/admingui/files/jxzy_list.jsp</result>			
+		</action>
+		<action name="listJxky" class="TbdocAction" method="listTbdoc">
+			<result name="success">/admingui/files/jxky_list.jsp</result>			
+		</action>
+		<action name="showZyhj" class="TbdocAction" method="listTbdoc">
+			<result name="success">/admingui/files/zyhj_show.jsp</result>			
+		</action>
+		<action name="showTbdoc" class="TbdocAction" method="showTbdoc">
+			<result name="success">/admingui/files/ipcdoc_show.jsp</result>		
+		</action>
+		<action name="showJxzy" class="TbdocAction" method="showTbdoc">
+			<result name="success">/admingui/files/jxzy_show.jsp</result>		
+		</action>
+		<action name="showJxky" class="TbdocAction" method="showTbdoc">
+			<result name="success">/admingui/files/jxky_show.jsp</result>		
+		</action>		
+		<action name="showXydt" class="TbdocAction" method="showTbdoc">
+			<result name="success">/admingui/files/xydt_show.jsp</result>		
+		</action>
+		
+		
+		<action name="goTbfile" class="TbfileAction" method="goAddTbfile">
+        	<result name="success" >/admingui/files/fileall_add.jsp</result>
+        	<result name="input">/admingui/files/error.jsp</result>         	
+        </action>	
+        <action name="addTbfile" class="AddTbfileAction">        	
+        	<result name="success" type="redirectAction">manageTbfile.action?tbfile.typekey=${tbfile.typekey}</result>	
+        	<result name="input">/admingui/files/error.jsp</result> 
+        	
+        </action>	        
+		<action name="viewTbfile" class="TbfileAction" method="viewTbfile">
+			<result name="success">/admingui/files/fileall_view.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="deleteTbfile" class="TbfileAction" method="deleteTbfile">
+			<result name="success" type="redirectAction">manageTbfile.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="updatePTbfile" class="TbfileAction" method="updatePTbfile">
+			<result name="success" >/admingui/files/fileall_update.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 	
+		</action>		
+		<action name="updateTbfile" class="UpdateTbfileAction" >
+			<result name="success" type="redirectAction">listTbfile.action</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="manageTbfile" class="TbfileAction" method="manageTbfile">
+			<result name="success">/admingui/files/fileall_manage.jsp</result>
+			<result name="input">/admingui/files/error.jsp</result> 
+		</action>
+		<action name="listTbfile" class="TbfileAction" method="listTbfile">
+			<result name="success">/admingui/files/filedownload_list.jsp</result>
+		</action>
+		<action name="fileDownload" class="TbfileAction" method="downloadTbfile">
+			 <param name="fileName"></param>  
+            <result name="success" type="stream">  
+                <!-- 下载文件类型定义 -->  
+                <param name="contentType">  
+                    application/octet-stream  
+                </param>  
+                <!-- 下载文件处理方法 -->  
+                <param name="contentDisposition">  
+                    attachment;filename="${downloadChineseFileName}"  
+                </param>  
+                <!-- 下载文件输出流定义 -->  
+                <param name="inputName">downloadFile</param>  
+                <param name="bufferSize">4096</param>  
+            </result>  
+		</action>	
+		<action name="listJxsp" class="TbfileAction" method="listTbfile">
+			<result name="success">/admingui/files/jxsp_list.jsp</result>
+		</action>
+		<action name="listJxkj" class="TbfileAction" method="listTbfile">
+			<result name="success">/admingui/files/jxkj_list.jsp</result>
+		</action>
+		<action name="videoShow" class="TbfileAction" method="videoShow">
+			<result name="success">/admingui/files/jxsp_show.jsp</result>
+		</action>	
+		<action name="index" class="IndexAction" >			
+			<result name="success">index.jsp</result>
+		</action>
+		
+		
+		<action name="goTbletter">
+        	<result>/admingui/files/letter_add.jsp</result>        		
+        </action>	
+        <action name="addTbletter" class="TbletterAction" method="addTbletter">        	
+        	<result name="success" type="redirect">/admingui/files/letter_success.jsp</result>	
+        	<result name="input">/admingui/files/letter_add.jsp</result> 
+        	
+        </action>	
+        <action name="manageTbletter" class="TbletterAction" method="manageTbletter">        	
+        	<result name="success">/admingui/files/letter_manage.jsp</result>	
+        	<result name="input">/admingui/files/error.jsp</result>        	
+        </action>
+         <action name="viewTbletter" class="TbletterAction" method="viewTbletter">        	
+        	<result name="success" >/admingui/files/letter_view.jsp</result>	
+        	<result name="input">/admingui/files/error.jsp</result>        	
+        </action>		
+         <action name="deleteTbletter" class="TbletterAction" method="deleteTbletter">        	
+        	<result name="success" type="redirectAction">manageTbletter.action</result>	
+        	<result name="input">/admingui/files/error.jsp</result>        	
+        </action> 
+	</package>
+</struts>

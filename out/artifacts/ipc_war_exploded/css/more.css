@@ -1,0 +1,117 @@
+.blank9 {
+	CLEAR: both; FONT-SIZE: 1px; MARGIN: 0px auto; WIDTH: 100%; HEIGHT: 9px
+}
+.blank10 {
+	CLEAR: both; FONT-SIZE: 1px; MARGIN: 0px auto; WIDTH: 100%; HEIGHT: 10px
+}
+.blank12 {
+	CLEAR: both; FONT-SIZE: 1px; MARGIN: 0px auto; WIDTH: 100%; HEIGHT: 12px
+}
+.area {
+	BACKGROUND: url(bg.gif) repeat-y; MARGIN: 0px auto; WIDTH: 950px
+}
+.area .col1 {
+	BORDER-TOP: #cccccc 1px solid; FLOAT: left; WIDTH: 124px
+}
+.area .col2 {
+	FLOAT: left; WIDTH: 11px
+}
+.area .col3 {
+	BORDER-TOP: #cccccc 1px solid; FLOAT: right; WIDTH: 815px
+}
+.leftTitle {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; PADDING-TOP: 6px; TEXT-ALIGN: left
+}
+.leftNav {
+	MARGIN: 0px auto; WIDTH: 95px
+}
+.leftNav .title {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(i2.gif) repeat-x 50% bottom; PADDING-BOTTOM: 9px; PADDING-TOP: 15px
+}
+.leftNav .title H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 14px; BACKGROUND: url(i1.gif) no-repeat 0px 3px; PADDING-BOTTOM: 0px; COLOR: #9c100d; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+.leftNav .list {
+	
+}
+.leftNav .list UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 9px
+}
+.leftNav .list LI {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 10px; BACKGROUND: url(i3.gif) no-repeat 0px 6px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 180%; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+.rightTitle {
+	BACKGROUND: #f0f4f5; WIDTH: 815px; HEIGHT: 28px
+}
+.rightTitle H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; PADDING-TOP: 8px; TEXT-ALIGN: left
+}
+.rightPicList {
+	
+}
+.rightPicList UL {
+	
+}
+.rightPicList LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px;  FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 165px; PADDING-TOP: 2px; LIST-STYLE-TYPE: none; TEXT-ALIGN: center
+}
+.rightPicList LI IMG {
+	BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BORDER-LEFT: #000 1px solid; BORDER-BOTTOM: #000 1px solid
+}
+.rightPicList LI H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; LINE-HEIGHT: 160%; PADDING-TOP: 2px; TEXT-ALIGN: center
+}
+.rightPicList .s1 {
+	MARGIN: 0px 10px 10px 0px
+}
+.rightPicList .s2 {
+	MARGIN: 0px 0px 10px
+}
+.pageTurn {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 20px; WIDTH: 815px; PADDING-TOP: 20px
+}
+.pageTurn UL {
+	MARGIN: 0px 0px 0px 70px; OVERFLOW: hidden; HEIGHT: 20px
+}
+.pageTurn LI {
+	FLOAT: left; MARGIN: 0px 6px 0px 0px; COLOR: #1f3a87; LIST-STYLE-TYPE: none
+}
+.pageTurn .s1 {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BACKGROUND: #f0f4f5; PADDING-BOTTOM: 0px; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #cccccc 1px solid; TEXT-ALIGN: center
+}
+.pageTurn .s1 A {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; COLOR: #1f3a87; PADDING-TOP: 3px
+}
+.pageTurn .s1 A:visited {
+	COLOR: #1f3a87
+}
+.pageTurn .s1 A:hover {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND: #1f3a87; PADDING-BOTTOM: 1px; COLOR: #fff; PADDING-TOP: 4px
+}
+.pageTurn .s2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 4px; TEXT-ALIGN: center
+}
+.bottomNav {
+	BORDER-RIGHT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 1px solid; BACKGROUND: #f0f4f5; MARGIN: 0px auto; BORDER-LEFT: #c0c0c0 1px solid; WIDTH: 948px; BORDER-BOTTOM: #c0c0c0 1px solid; HEIGHT: 25px
+}
+.bottomNav UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 7px
+}
+.bottomNav LI {
+	LIST-STYLE-TYPE: none
+}
+.bottomNav H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FLOAT: left; COLOR: #bc2931; TEXT-ALIGN: left
+}
+.bottomNav LI SPAN {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; COLOR: #9c9c9c; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+.friendLink {
+	MARGIN: 0px auto; WIDTH: 950px
+}
+.friendLink UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 9px; PADDING-TOP: 9px
+}
+.friendLink LI {
+	LINE-HEIGHT: 180%; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}

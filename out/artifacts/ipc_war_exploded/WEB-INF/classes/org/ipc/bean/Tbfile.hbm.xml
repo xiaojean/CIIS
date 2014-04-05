@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.ipc.bean.Tbfile" table="tb_file">
+		<id name="id" type="java.lang.Integer" column="id">
+			<generator class="increment"></generator>
+		</id>
+			<property name="typekey" type="string" column="typekey"
+			length="50">
+		</property>
+		<property name="title" type="string" column="title"
+			length="100">
+		</property>
+		<property name="typevalue" type="string" column="typevalue"
+			length="50">
+		</property>
+		<property name="ranName" type="string" column="ranName"	length="50">
+		</property>
+		<property name="author" type="string" column="author" length="50"></property>
+		<property name="ptime" type="java.sql.Date" column="ptime" length="50"></property>
+		
+	</class>
+</hibernate-mapping>

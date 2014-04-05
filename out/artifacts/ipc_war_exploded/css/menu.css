@@ -1,0 +1,171 @@
+#menulayer0Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer0Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer0Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer0Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer0Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer1Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer1Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer1Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer1Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer1Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer2Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer2Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer2Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer2Div {
+	LEFT: -100px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer2Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer3Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer3Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer3Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer3Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer3Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer4Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer4Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer4Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer4Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer4Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer5Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer5Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer5Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer5Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer5Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer6Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer6Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer6Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer6Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer6Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer7Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer7Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer7Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer7Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer7Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#menulayer8Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#iconlayer8Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 3000px 0px); POSITION: absolute; TOP: 19px; HEIGHT: 3000px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#barlayer8Div {
+	LEFT: 0px; CLIP: rect(0px 4000px 19px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 19px; BACKGROUND-COLOR: #ecf2fc; layer-background-color: #ECF2FC
+}
+#uplayer8Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 26px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+#downlayer8Div {
+	LEFT: -20px; WIDTH: 16px; CLIP: rect(0px 16px 16px 0px); POSITION: absolute; TOP: 42px; HEIGHT: 16px; BACKGROUND-COLOR: #cccccc; layer-background-color: #cccccc
+}
+A:link {
+	COLOR: #0000b7; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0000b7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #0000b7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0000b7; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 9pt; COLOR: #40108f
+}
+TH {
+	FONT-SIZE: 9pt; COLOR: #40108f
+}
+FONT {
+	FONT-SIZE: 8pt
+}
+.chinese_text13 {
+	FONT-SIZE: 8pt; FILTER: Blur(Add=0, Direction=0, Strength=0); FONT-FAMILY: Verdana,ËÎÌו
+}
+#divLoadCont {
+	Z-INDEX: 500; LEFT: 0px; WIDTH: 115px; CLIP: rect(0px 100% 100% 0px); POSITION: absolute; TOP: 0px; HEIGHT: 100%; BACKGROUND-COLOR: #ecf2fc; layer-background-color: white
+}
+#divLoad1 {
+	POSITION: absolute; BACKGROUND-COLOR: silver; layer-background-color: silver
+}
+#divLoad2 {
+	LEFT: 0px; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: navy; layer-background-color: nacy
+}
+#divLoadText {
+	FONT-SIZE: 8px; COLOR: white; FONT-FAMILY: arial,ËÎÌו; POSITION: absolute; BACKGROUND-COLOR: transparent
+}

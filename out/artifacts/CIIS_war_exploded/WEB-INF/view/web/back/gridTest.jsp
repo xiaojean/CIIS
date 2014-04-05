@@ -8,12 +8,21 @@
     <title>Books</title>
     <jsp:include page="/WEB-INF/view/common/base.jsp"/>
     <jsp:include page="/WEB-INF/view/common/jqgrid.jsp"/>
+    <style type="text/css">
+        body {
+            margin-left: 1px;
+            margin-top: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            border-right: 0px;
+            overflow: hidden;
+        }
+        html { overflow-x: hidden; overflow-y: hidden; border:0;}
+    </style>
 </head>
 <body>
-
-<table id="grid"></table>
-<div id="pager"></div>
-
+    <table id="grid"></table>
+    <div id="pager"></div>
 <script type="text/javascript">
     $(function () {
         var editOptions = {
@@ -65,27 +74,21 @@
         $("#grid").jqGrid({
             url: URL,
             editurl: URL,
+            async:false,
             altRows:true,
             multiselect : true,
             colModel: [
-                {name: 'user_id', label: 'ID', index: 'user_id', formatter: 'integer', width: 40,
-                    editable: true, editoptions: {disabled: true, size: 5}},
-                {name: 'loginname', label: '1', index: 'loginname', width: 300, editable: true,
-                    editrules: {required: true}},
-                {name: 'password', label: '2', index: 'password', width: 300, editable: true,
-                    editrules: {required: true}},
-                {name: 'username', label: '3', index: 'username', width: 300, editable: true,
-                    editrules: {required: true}},
-                {name: 'rights', label: '4', index: 'rights', width: 300, editable: true,
-                    editrules: {required: true}},
-                {name: 'status', label: '5', index: 'status', width: 300, editable: true,
-                    editrules: {required: true}},
-                {name: 'last_login', label: '6', index: 'last_login', width: 300, editable: true,
-                    editrules: {required: true}}
+                {name: 'user_id', label: 'ID', index: 'user_id'},
+                {name: 'loginname', label: '1', index: 'loginname'},
+                {name: 'password', label: '2', index: 'password'},
+                {name: 'username', label: '3', index: 'username'},
+                {name: 'rights', label: '4', index: 'rights'},
+                {name: 'status', label: '5', index: 'status'},
+                {name: 'last_login', label: '6', index: 'last_login'}
             ],
-            caption: "Books",
             pager: '#pager',
             height: 'auto',
+            autowidth:true,
             ondblClickRow: function (id) {
                 jQuery(this).jqGrid('editGridRow', id, editOptions);
             }

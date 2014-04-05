@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/ipc"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+		<property name="maxActive" value="1000"></property>
+		<property name="maxIdle" value="0"></property>
+		<property name="maxWait" value="500"></property>
+		<property name="defaultAutoCommit" value="true"></property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+			
+				<value>org/ipc/bean/Tbletter.hbm.xml</value>
+				<value>org/ipc/bean/Tbdoc.hbm.xml</value>
+				<value>org/ipc/bean/Tbipc.hbm.xml</value>
+				<value>org/ipc/bean/Tbfile.hbm.xml</value>
+				<value>org/ipc/bean/Tbteacher.hbm.xml</value>
+				
+			</list>			
+		</property>
+	</bean>
+	
+	<!-- letter操作 -->
+	 
+	<bean id="tbletterDao" class="org.ipc.dao.impl.TbletterDAOImpl" scope="prototype">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="tbletterService" class="org.ipc.service.impl.TbletterServiceImpl" scope="prototype">
+		<property name="tbletterDao" ref="tbletterDao"></property>
+	</bean>
+	<bean id="TbletterAction" class="org.ipc.action.TbletterAction" scope="prototype">
+		<property name="service" ref="tbletterService"></property>
+	</bean>	
+	
+	
+	
+	<bean id="LoginAction" class="org.ipc.action.LoginAction" scope="prototype">
+		<property name="service" ref="tbteacherService"></property>
+	</bean>
+	
+	
+	<bean id="tbipcDao" class="org.ipc.dao.impl.TbipcDAOImpl" scope="prototype">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="tbipcService" class="org.ipc.service.impl.TbipcServiceImpl" scope="prototype">
+		<property name="tbipcDao" ref="tbipcDao"></property>
+	</bean>
+	<bean id="TbipcAction" class="org.ipc.action.TbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	
+	<bean id="AddTbipcAction" class="org.ipc.action.AddTbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	<bean id="UpdateTbipcAction" class="org.ipc.action.UpdateTbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	
+	
+	
+	
+	<bean id="tbdocDao" class="org.ipc.dao.impl.TbdocDAOImpl" scope="prototype">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="tbdocService" class="org.ipc.service.impl.TbdocServiceImpl" scope="prototype">
+		<property name="tbdocDao" ref="tbdocDao"></property>
+	</bean>
+	<bean id="TbdocAction" class="org.ipc.action.TbdocAction" scope="prototype">
+		<property name="service" ref="tbdocService"></property>
+	</bean>
+	
+	<bean id="AddTbdocAction" class="org.ipc.action.AddTbdocAction" scope="prototype">
+		<property name="service" ref="tbdocService"></property>
+	</bean>
+	<bean id="UpdateTbdocAction" class="org.ipc.action.UpdateTbdocAction" scope="prototype">
+		<property name="service" ref="tbdocService"></property>
+	</bean>
+	
+	
+	
+	
+	<bean id="tbfileDao" class="org.ipc.dao.impl.TbfileDAOImpl" scope="prototype">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="tbfileService" class="org.ipc.service.impl.TbfileServiceImpl" scope="prototype">
+		<property name="tbfileDao" ref="tbfileDao"></property>
+	</bean>
+	<bean id="TbfileAction" class="org.ipc.action.TbfileAction" scope="prototype">
+		<property name="service" ref="tbfileService"></property>
+	</bean>
+	
+	<bean id="AddTbfileAction" class="org.ipc.action.AddTbfileAction" scope="prototype">
+		<property name="service" ref="tbfileService"></property>
+	</bean>
+	<bean id="UpdateTbfileAction" class="org.ipc.action.UpdateTbfileAction" scope="prototype">
+		<property name="service" ref="tbfileService"></property>
+	</bean>
+	
+	
+	<bean id="IndexAction" class="org.ipc.action.IndexAction" scope="prototype">
+		<property name="tbipcservice" ref="tbipcService"></property>
+		<property name="tbdocservice" ref="tbdocService"></property>
+	</bean>
+	
+	
+	
+	
+	<bean id="tbteacherDao" class="org.ipc.dao.impl.TbteacherDAOImpl" scope="prototype">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="tbteacherService" class="org.ipc.service.impl.TbteacherServiceImpl" scope="prototype">
+		<property name="tbteacherDao" ref="tbteacherDao"></property>
+	</bean>
+	<bean id="TbteacherAction" class="org.ipc.action.TbteacherAction" scope="prototype">
+		<property name="service" ref="tbteacherService"></property>
+	</bean>
+	
+	<bean id="AddTbteacherAction" class="org.ipc.action.AddTbteacherAction" scope="prototype">
+		<property name="service" ref="tbteacherService"></property>
+	</bean>
+	<bean id="UpdateTbteacherAction" class="org.ipc.action.UpdateTbteacherAction" scope="prototype">
+		<property name="service" ref="tbteacherService"></property>
+	</bean>
+	
+	<!-- 
+	<bean id="GoOverviewAction" class="org.ipc.action.TbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	<bean id="OverviewAction" class="org.ipc.action.TbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	<bean id="AddOverviewAction" class="org.ipc.action.TbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	<bean id="ListOverviewAction" class="org.ipc.action.TbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	<bean id="ViewOverviewAction" class="org.ipc.action.TbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>	
+	<bean id="DeleteOverviewAction" class="org.ipc.action.TbipcAction" scope="prototype">
+		<property name="service" ref="tbipcService"></property>
+	</bean>
+	 -->
+	<!--
+	<bean id="listUserAction" class="com.test.action.user.ListUserAction" scope="prototype">
+		<property name="service" ref="userService"></property>
+	</bean>
+	
+	<bean id="removeUserAction" class="com.test.action.user.RemoveUserAction" scope="prototype">
+		<property name="service" ref="userService"></property>
+	</bean>
+	<bean id="updatePUserAction" class="com.test.action.user.UpdatePUserAction" scope="prototype">
+	<property name="service" ref="userService"></property>
+	</bean>
+
+	<bean id="updateUserAction" class="com.test.action.user.UpdateUserAction" scope="prototype">
+		<property name="service" ref="userService"></property>
+	</bean>
+	<bean id="generateExcelAction" class="com.test.action.user.GenerateExcelAction" scope="singleton">
+	<property name="service" ref="userService"></property>
+	</bean>
+	 -->
+	<!-- fck操作 -->
+	<!--  
+	<bean id="fckDao" class="com.test.dao.impl.FckDAOImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="fckService" class="com.test.service.impl.FckServiceImpl">
+		<property name="fckDao" ref="fckDao"></property>
+	</bean>
+	<bean id="saveFckAction" class="com.test.action.fckeditor.SaveFckAction" scope="prototype">
+		<property name="service" ref="fckService"></property>
+	</bean>
+	<bean id="listFckAction" class="com.test.action.fckeditor.ListFckAction" scope="prototype">
+		<property name="service" ref="fckService"></property>
+	</bean>
+	<bean id="removeFckAction" class="com.test.action.fckeditor.RemoveFckAction" scope="prototype">
+		<property name="service" ref="fckService"></property>
+	</bean>	
+	<bean id="showFckAction" class="com.test.action.fckeditor.ShowFckAction" scope="prototype">
+		<property name="service" ref="fckService"></property>
+	</bean>
+	<bean id="updatePFckAction" class="com.test.action.fckeditor.UpdatePFckAction" scope="prototype">
+		<property name="service" ref="fckService"></property>
+	</bean>
+	<bean id="updateFckAction" class="com.test.action.fckeditor.UpdateFckAction" scope="prototype">
+		<property name="service" ref="fckService"></property>
+	</bean>
+	-->
+	<!-- 单文件上传及下载 -->
+	<!-- 
+	
+	<bean id="sfileDao" class="com.test.dao.impl.SFileDAOImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>	
+	<bean id="sfileService" class="com.test.service.impl.SFileServiceImpl">
+		<property name="sfileDao" ref="sfileDao"></property>
+	</bean>
+	<bean id="sfUploadAction" class="com.test.action.fileupload.SingleFileUploadAction" scope="prototype">
+		<property name="service" ref="sfileService"></property>
+	</bean>
+	<bean id="ListSFileAction" class="com.test.action.fileupload.ListSFileAction" scope="prototype">
+		<property name="service" ref="sfileService"></property>
+	</bean>
+	<bean id="RemoveSFileAction" class="com.test.action.fileupload.RemoveSFileAction" scope="prototype">
+		<property name="service" ref="sfileService"></property>
+	</bean>
+	<bean id="SFileDownloadAction" class="com.test.action.fileupload.SingleFileDownloadAction" scope="prototype">
+		<property name="service" ref="sfileService"></property>
+	</bean>
+	 -->
+	<!-- 多文件上传及下载 -->
+	<!--  
+	<bean id="mfileDao" class="com.test.dao.impl.MFileDAOImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>	
+	<bean id="mfileService" class="com.test.service.impl.MFileServiceImpl">
+		<property name="mfileDao" ref="mfileDao"></property>
+	</bean>
+	<bean id="MFUploadAction" class="com.test.action.fileupload.MultiFileUploadAction" scope="prototype">
+		<property name="service" ref="mfileService"></property>
+	</bean>
+	<bean id="ListMFileAction" class="com.test.action.fileupload.ListMFileAction" scope="prototype">
+		<property name="service" ref="mfileService"></property>
+	</bean>
+	<bean id="RemoveMFileAction" class="com.test.action.fileupload.RemoveMFileAction" scope="prototype">
+		<property name="service" ref="mfileService"></property>
+	</bean>  
+	-->
+	<!-- 区县操作 -->
+	<!-- 
+	<bean id="qxDao" class="com.test.dao.impl.QxDAOImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>	
+	<bean id="qxService" class="com.test.service.impl.QxServiceImpl">
+		<property name="qxDao" ref="qxDao"></property>
+	</bean>	
+	<bean id="AddQxAction" class="com.test.action.dep.SaveQxAction" scope="prototype">
+		<property name="service" ref="qxService"></property>
+	</bean>
+	<bean id="ListQxAction" class="com.test.action.dep.ListQxAction" scope="prototype">
+		<property name="service" ref="qxService"></property>
+	</bean>
+	<bean id="ShowQxAction" class="com.test.action.dep.ShowQxAction" scope="prototype">
+		<property name="service" ref="qxService"></property>
+	</bean>
+	<bean id="RemoveQxAction" class="com.test.action.dep.RemoveQxAction" scope="prototype">
+		<property name="service" ref="qxService"></property>
+	</bean>
+	 -->
+	<!-- 街道操作 -->
+	<!--  
+	<bean id="jdDao" class="com.test.dao.impl.JdDAOImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>	
+	<bean id="jdService" class="com.test.service.impl.JdServiceImpl">
+		<property name="jdDao" ref="jdDao"></property>
+	</bean>	
+	<bean id="AddJdAction" class="com.test.action.dep.SaveJdAction" scope="prototype">
+		<property name="service" ref="jdService"></property>
+	</bean>
+	<bean id="ListJdAction" class="com.test.action.dep.ListJdAction" scope="prototype">
+		<property name="service" ref="jdService"></property>
+	</bean>
+	<bean id="RemoveJdAction" class="com.test.action.dep.RemoveJdAction" scope="prototype">
+		<property name="service" ref="jdService"></property>
+	</bean>
+	-->
+</beans>

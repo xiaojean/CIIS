@@ -1,0 +1,120 @@
+BODY {
+	BACKGROUND: #a5a5a5; MARGIN: 0px
+}
+A.top:link {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.top:visited {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.top:hover {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.top:active {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.top_input {
+	BORDER-RIGHT: #d4d0c8 1px solid; FONT-SIZE: 12px; BORDER-LEFT-COLOR: #7f7f7f; WIDTH: 190px; COLOR: #7f7f7f; BORDER-TOP-COLOR: #7f7f7f; BORDER-BOTTOM: #d4d0c8 1px solid; FONT-FAMILY: "宋体"; HEIGHT: 14px
+}
+.top_button {
+	BACKGROUND: url(../images/gzcy/4.gif) no-repeat; WIDTH: 59px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 19px; BORDER-BOTTOM-STYLE: none
+}
+.top_bj {
+	BACKGROUND: url(../images/gzcy/szzc_bj02.gif) repeat-y
+}
+.top_bj1 {
+	BACKGROUND: url(../images/gzcy/1.gif) repeat-x
+}
+.sczz_bj01 {
+	BACKGROUND: url(../images/gzcy/szzc_bj04.jpg) no-repeat
+}
+.sczz_z01 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"
+}
+.sczz_z02 {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.sczz_z02:hover {
+	TEXT-DECORATION: underline
+}
+A.sczz_z02:active {
+	TEXT-DECORATION: underline
+}
+.sczz_z03 {
+	FONT-SIZE: 12px; COLOR: #5c0402; LINE-HEIGHT: 22px; FONT-FAMILY: "宋体"
+}
+.di {
+	FONT-SIZE: 12px; COLOR: #212121; LINE-HEIGHT: 20px; FONT-FAMILY: "宋体"
+}
+.sczz_z04 {
+	PADDING-LEFT: 463px; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "宋体"
+}
+.sc1_bj01 {
+	BACKGROUND: url(../images/gzcy/sc1_bj01.jpg) no-repeat
+}
+.sc1_bj02 {
+	BACKGROUND: url(../images/gzcy/sc1_bj02.jpg) no-repeat
+}
+.sc1_z01 {
+	FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: "宋体"
+}
+.sc1_input1 {
+	BORDER-RIGHT: #bbbbbb 1px solid; BORDER-TOP: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; WIDTH: 48px; BORDER-BOTTOM: #bbbbbb 1px solid; HEIGHT: 16px
+}
+.sc1_input2 {
+	BORDER-RIGHT: #bbbbbb 1px solid; BORDER-TOP: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; WIDTH: 192px; BORDER-BOTTOM: #bbbbbb 1px solid; HEIGHT: 16px
+}
+.sc1_input3 {
+	WIDTH: 90px; HEIGHT: 20px
+}
+.sc1_input4 {
+	BORDER-RIGHT: #bbbbbb 1px solid; BORDER-TOP: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; WIDTH: 320px; BORDER-BOTTOM: #bbbbbb 1px solid; HEIGHT: 16px
+}
+.sc1_input5 {
+	BORDER-RIGHT: #bbbbbb 1px solid; BORDER-TOP: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; WIDTH: 514px; BORDER-BOTTOM: #bbbbbb 1px solid; HEIGHT: 170px
+}
+.zxft_bj01 {
+	BACKGROUND: url(../images/gzcy/zxft_bj01.jpg) no-repeat
+}
+.zxft_z01 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #754a2e; FONT-FAMILY: "宋体"
+}
+.zxft_z02 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 20px; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.zxft_z02:hover {
+	LINE-HEIGHT: 20px; TEXT-DECORATION: underline
+}
+A.zxft_z02:active {
+	LINE-HEIGHT: 20px; TEXT-DECORATION: underline
+}
+.zx1_bj01 {
+	BACKGROUND: url(../images/gzcy/zx1_bj01.jpg) no-repeat
+}
+.zx3_kuang01 {
+	BORDER-RIGHT: #afbad4 1px solid; BORDER-TOP: #afbad4 1px solid; BORDER-LEFT: #afbad4 1px solid; BORDER-BOTTOM: #afbad4 1px solid
+}
+.zx4_bj01 {
+	BACKGROUND: url(../images/gzcy/zx4_bj01.jpg) no-repeat
+}
+.zx4_z01 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 22px; FONT-FAMILY: "宋体"
+}
+.zx4_input1 {
+	BACKGROUND: url(../images/gzcy/zx4_bj05.jpg) repeat-x; WIDTH: 140px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 18px; BORDER-BOTTOM-STYLE: none
+}
+.zx4_input2 {
+	BACKGROUND: url(../images/gzcy/zx4_bj06.jpg) repeat-x; WIDTH: 650px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 58px; BORDER-BOTTOM-STYLE: none
+}
+.zxts_bj01 {
+	BACKGROUND: url(../images/gzcy/zxts_bj01.jpg) no-repeat
+}
+.zxts_input1 {
+	FONT-SIZE: 12px; WIDTH: 192px; FONT-FAMILY: "宋体"; HEIGHT: 20px
+}
+.bmwd_bj01 {
+	BACKGROUND: url(../images/gzcy/bmwd_bj01.jpg) no-repeat
+}
+.zxdc_bj01 {
+	BACKGROUND: url(../images/gzcy/zxdc_bj01.jpg) no-repeat
+}

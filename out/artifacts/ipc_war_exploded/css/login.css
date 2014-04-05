@@ -1,0 +1,39 @@
+A.link3_song12:link {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.link3_song12:visited {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.link3_song12:active {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.link3_song12:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.operate:link {
+	FONT-SIZE: 10.5pt; COLOR: #000000; TEXT-DECORATION: none
+}
+A.operate:visited {
+	FONT-SIZE: 10.5pt; COLOR: #000000; TEXT-DECORATION: none
+}
+A.operate:hover {
+	FONT-SIZE: 10.5pt; COLOR: #e86c22
+}
+.tablebg {
+	BORDER-TOP: #ffffff 1px solid; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #ffffff; BACKGROUND-IMAGE: url(../images/buttons/button_bg.gif); COLOR: #000000; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 25px; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-COLOR: #ffffff
+}
+.bg_login {
+	BACKGROUND-IMAGE: url(../images/login/login.gif); BACKGROUND-REPEAT: no-repeat
+}
+.T_song12bk1 {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+INPUT {
+	BORDER-RIGHT: #000000 1pt solid; BORDER-TOP: #000000 1pt solid; BORDER-LEFT: #000000 1pt solid; BORDER-BOTTOM: #000000 1pt solid; BACKGROUND-COLOR: #ffffff
+}
+.unseenbutton {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff
+}
+.button2 {
+	BACKGROUND-IMAGE: url(../images/button/button2.gif); BACKGROUND-REPEAT: no-repeat
+}

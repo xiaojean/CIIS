@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.ipc.bean.Tbteacher" table="tb_teacher">
+		<id name="id" type="java.lang.Integer" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="tid" type="java.lang.String" column="tid"
+			length="50">
+		</property>
+		<property name="tpwd" type="java.lang.String" column="tpwd"
+			length="50">
+		</property>
+		<property name="tname" type="java.lang.String" column="tname"
+			length="50">
+		</property>
+		<property name="picname" type="java.lang.String" column="picname"
+			length="50">
+		</property>
+		<property name="power" type="java.lang.String" column="power"
+			length="50">
+		</property>
+		<property name="content" type="java.lang.String" column="content" ></property>
+		<property name="ptime" type="java.sql.Date" column="ptime" ></property>
+		
+	</class>
+</hibernate-mapping>

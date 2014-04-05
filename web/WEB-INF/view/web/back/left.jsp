@@ -2,22 +2,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
     <title>管理页面</title>
-
+    <jsp:include page="/WEB-INF/view/common/base.jsp"/>
     <script src="/resource/web/js/moo/prototype.lite.js" type="text/javascript"></script>
     <script src="/resource/web/js/moo/moo.fx.js" type="text/javascript"></script>
     <script src="/resource/web/js/moo/moo.fx.pack.js" type="text/javascript"></script>
     <style>
         body {
-            font:12px Arial, Helvetica, sans-serif;
+            font: 12px Arial, Helvetica, sans-serif;
             color: #000;
             background-color: #EEF2FB;
             margin: 0px;
         }
+
         #container {
             width: 182px;
         }
+
         H1 {
             font-size: 12px;
             margin: 0px;
@@ -26,6 +28,7 @@
             height: 30px;
             line-height: 20px;
         }
+
         H1 a {
             display: block;
             width: 182px;
@@ -40,18 +43,21 @@
             margin: 0px;
             padding: 0px;
         }
-        .content{
+
+        .content {
             width: 182px;
             height: 26px;
 
         }
-        .MM ul {
+
+        .childModule ul {
             list-style-type: none;
             margin: 0px;
             padding: 0px;
             display: block;
         }
-        .MM li {
+
+        .childModule li {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             line-height: 26px;
@@ -63,7 +69,8 @@
             width: 182px;
             padding-left: 0px;
         }
-        .MM {
+
+        .childModule {
             width: 182px;
             margin: 0px;
             padding: 0px;
@@ -71,9 +78,10 @@
             top: 0px;
             right: 0px;
             bottom: 0px;
-            clip: rect(0px,0px,0px,0px);
+            clip: rect(0px, 0px, 0px, 0px);
         }
-        .MM a:link {
+
+        .childModule a:link {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             line-height: 26px;
@@ -89,7 +97,8 @@
             overflow: hidden;
             text-decoration: none;
         }
-        .MM a:visited {
+
+        .childModule a:visited {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             line-height: 26px;
@@ -104,7 +113,8 @@
             width: 182px;
             text-decoration: none;
         }
-        .MM a:active {
+
+        .childModule a:active {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             line-height: 26px;
@@ -120,7 +130,8 @@
             overflow: hidden;
             text-decoration: none;
         }
-        .MM a:hover {
+
+        .childModule a:hover {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             line-height: 26px;
@@ -137,114 +148,79 @@
             text-decoration: none;
         }
     </style>
+    <script type="text/javascript">
+        var allModuleNodes = [];
+        // 获取级别为1的模块
+        jQuery(function(){
+            var $container = jQuery("#container");
+            jQuery.ajax({
+                url: "/module/allModuleList.do",
+                type: "get",
+                async: false,
+                success: function (data) {
+                    allModuleNodes = data;
+                }
+            });
+
+            jQuery.ajax({
+                url: "/module/moduleListByLevel.do?level=1",
+                type: "get",
+                async: false,
+                success: function (data) {
+                    jQuery.each(data, function (idx, obj) {
+                        var $level1 = jQuery('<h1 class="type" ref="' + obj.id + '"><a href="javascript:void(0)">'+obj.name+'</a></h1>' +
+                                '<div class="content"  ref="' + obj.id + '">' +
+                                '<table width="100%" border="0" cellspacing="0" cellpadding="0">' +
+                                '<tr><td><img src="/resource/web/image/menu_topline.gif" width="182" height="5" /></td></tr></table>' +
+                                '<ul class="childModule" style="overflow: auto"></ul>' +
+                                '</div>');
+
+                        loadChildAccord(obj.id,$level1);
+                        $level1.appendTo($container);
+                    })
+
+                }
+            });
+
+            var contents = document.getElementsByClassName('content');
+            var toggles = document.getElementsByClassName('type');
+            var myAccordion = new fx.Accordion(
+                    toggles, contents, {opacity: true, duration: 400}
+            );
+            myAccordion.showThisHideOpen(contents[0]);
+        });
+
+        // 加载子节点
+        var loadChildAccord = function(parentId,contentObj){
+            var $ulEle = contentObj.find("ul");
+            jQuery.each(allModuleNodes,function(idj,childObj){
+                // 将子节点放入div
+                if(parentId == childObj.parent_ID){
+                    $ulEle.append("<li ref='"+childObj.id+"' url='"+childObj.url+"'>" +
+                            "<a href='#' onclick='openCenterWin("+childObj.id+")'>"+childObj.name+"</a></li>")
+                            .appendTo(jQuery("div[ref='"+childObj.parent_ID+"']"));
+                }
+            })
+        }
+
+        var openCenterWin = function(id){
+            alert(id);
+            var $clickObj = jQuery("li[ref="+id+"]");
+            var url = $clickObj.attr("url");
+            var parentWin = parent["refreshCenterWin"];
+            if(typeof parentWin == 'function'){
+                parentWin(url);
+            }
+        }
+    </script>
 </head>
 
 <body>
 <table width="100%" height="280" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF2FB">
     <tr>
-        <td width="182" valign="top"><div id="container">
-            <h1 class="type"><a href="javascript:void(0)">网站常规管理</a></h1>
-            <div class="content">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td><img src="/resource/web/image/menu_topline.gif" width="182" height="5" /></td>
-                    </tr>
-                </table>
-                <ul class="MM">
-                    <li><a href="http://www.865171.cn" target="main">基本设置</a></li>
-                    <li><a href="http://www.865171.cn" target="main">邮件设置</a></li>
-                    <li><a href="http://www.865171.cn" target="main">广告设置</a></li>
-                    <li><a href="http://www.865171.cn" target="main">114增加</a></li>
-                    <li><a href="http://www.865171.cn" target="main">114管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">联系方式</a></li>
-                    <li><a href="http://www.865171.cn" target="main">汇款方式</a></li>
-                    <li><a href="http://www.865171.cn" target="main">增加链接</a></li>
-                    <li><a href="http://www.865171.cn" target="main">管理链接</a></li>
-                </ul>
+        <td width="182" valign="top">
+            <div id="container">
             </div>
-            <h1 class="type"><a href="javascript:void(0)">栏目分类管理</a></h1>
-            <div class="content">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td><img src="/resource/web/image/menu_topline.gif" width="182" height="5" /></td>
-                    </tr>
-                </table>
-                <ul class="MM">
-                    <li><a href="http://www.865171.cn" target="main">信息分类</a></li>
-                    <li><a href="http://www.865171.cn" target="main">信息类型</a></li>
-                    <li><a href="http://www.865171.cn" target="main">资讯分类</a></li>
-                    <li><a href="http://www.865171.cn" target="main">地区设置</a></li>
-                    <li><a target="main" href="http://www.865171.cn">市场联盟</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商家类型</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商家星级</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商品分类</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商品类型</a></li>
-                </ul>
-            </div>
-            <h1 class="type"><a href="javascript:void(0)">栏目内容管理</a></h1>
-            <div class="content">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td><img src="/resource/web/image/menu_topline.gif" width="182" height="5" /></td>
-                    </tr>
-                </table>
-                <ul class="MM">
-                    <li><a href="http://www.865171.cn" target="main">信息管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">张贴管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">增加商家</a></li>
-                    <li><a href="http://www.865171.cn" target="main">管理商家</a></li>
-                    <li><a href="http://www.865171.cn" target="main">发布资讯</a></li>
-                    <li><a href="http://www.865171.cn" target="main">资讯管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">市场联盟</a></li>
-                    <li><a href="http://www.865171.cn" target="main">名片管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商城管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商品管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商城留言</a></li>
-                    <li><a href="http://www.865171.cn" target="main">商城公告</a></li>
-                </ul>
-            </div>
-            <h1 class="type"><a href="javascript:void(0)">注册用户管理</a></h1>
-            <div class="content">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td><img src="/resource/web/image/menu_topline.gif" width="182" height="5" /></td>
-                    </tr>
-                </table>
-                <ul class="MM">
-                    <li><a href="http://www.865171.cn" target="main">会员管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">留言管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">回复管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">订单管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">举报管理</a></li>
-                    <li><a href="http://www.865171.cn" target="main">评论管理</a></li>
-                </ul>
-            </div>
-        </div>
-            <h1 class="type"><a href="javascript:void(0)">其它参数管理</a></h1>
-            <div class="content">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td><img src="/resource/web/image/menu_topline.gif" width="182" height="5" /></td>
-                    </tr>
-                </table>
-                <ul class="MM">
-                    <li><a href="http://www.865171.cn" target="main">管理设置</a></li>
-                    <li><a href="http://www.865171.cn" target="main">主机状态</a></li>
-                    <li><a href="http://www.865171.cn" target="main">攻击状态</a></li>
-                    <li><a href="http://www.865171.cn" target="main">登陆记录</a></li>
-                    <li><a href="http://www.865171.cn" target="main">运行状态</a></li>
-                </ul>
-            </div>
-            </div>
-            <script type="text/javascript">
-                var contents = document.getElementsByClassName('content');
-                var toggles = document.getElementsByClassName('type');
-
-                var myAccordion = new fx.Accordion(
-                        toggles, contents, {opacity: true, duration: 400}
-                );
-                myAccordion.showThisHideOpen(contents[0]);
-            </script>
         </td>
     </tr>
 </table>

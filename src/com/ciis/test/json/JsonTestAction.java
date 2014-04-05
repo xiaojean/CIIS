@@ -22,7 +22,7 @@ public class JsonTestAction {
 
     private HashMap<String,String> params = new HashMap<String,String>();
 
-    @RequestMapping(value = "/zhangdj/{id}/aaaa.do" ,produces="application/json;charset=UTF-8", method = RequestMethod.GET )
+        @RequestMapping(value = "/zhangdj/{id}/mains.do" ,produces="application/json;charset=UTF-8", method = RequestMethod.GET )
     @ResponseBody
     public HashMap<String,String> method1(@PathVariable("id") String id) throws Exception{
         HashMap<String,String> jsonPOJOObj = new HashMap<String,String>();

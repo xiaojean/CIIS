@@ -1,0 +1,15 @@
+.onShow {
+	PADDING-RIGHT: 5px; DISPLAY: inline; PADDING-LEFT: 25px; BACKGROUND: url(../images/formValidator/tipBg.gif) no-repeat 3px 2px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-TOP: 0px; ZOOM: 1; HEIGHT: 22px
+}
+.onFocus {
+	PADDING-RIGHT: 5px; DISPLAY: inline; PADDING-LEFT: 25px; BACKGROUND: url(../images/formValidator/tipBg.gif) #e9f0ff no-repeat 3px -17px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-TOP: 0px; ZOOM: 1; HEIGHT: 22px
+}
+.onError {
+	PADDING-RIGHT: 5px; DISPLAY: inline; PADDING-LEFT: 25px; BACKGROUND: url(../images/formValidator/tipBg.gif) #fff2e9 no-repeat 3px -37px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-TOP: 0px; ZOOM: 1; HEIGHT: 22px
+}
+.onSuccess {
+	PADDING-RIGHT: 5px; DISPLAY: inline; PADDING-LEFT: 25px; BACKGROUND: url(../images/formValidator/tipBg.gif) #e9ffeb no-repeat 3px -57px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-TOP: 0px; ZOOM: 1; HEIGHT: 22px
+}
+.onLoad {
+	PADDING-RIGHT: 5px; DISPLAY: inline; PADDING-LEFT: 25px; BACKGROUND: url(../images/formValidator/loading.gif) #e9ffeb no-repeat 3px 3px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-TOP: 0px; ZOOM: 1; HEIGHT: 22px
+}

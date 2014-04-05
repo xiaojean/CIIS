@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="tbipc.title">
+		<field-validator type="requiredstring">
+			<message>标题不能为空</message>
+		</field-validator>
+	</field>
+
+	<field name="tbipc.typevalue">
+		<field-validator type="requiredstring">
+			<message>类型不能为空</message>
+		</field-validator>
+	</field>
+	<field name="tbipc.file">
+		<field-validator type="requiredfile">
+			<message>必须指定上传的图片</message>
+		</field-validator>
+	</field>
+	<field name="tbipc.author">
+		<field-validator type="requiredstring">
+			<message>发布单位不能为空</message>
+		</field-validator>
+	</field>
+	<!--  
+	<field name="tbipc.ptime">
+		<field-validator type="requiredstring">
+			<message>发布时间不能为空</message>
+		</field-validator>
+	</field>
+	-->
+	<field name="tbipc.content">
+		<field-validator type="required">
+			<message>内容不能为空</message>
+		</field-validator>
+	</field>
+
+</validators>

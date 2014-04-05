@@ -1,11 +1,11 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="en" />
     <jsp:include page="/WEB-INF/view/common/base.jsp" />
-    <title>Iframe Layout</title>
+    <title>后台管理</title>
 
     <style type="text/css">
 
@@ -130,25 +130,18 @@
 
 <h3>Loading...</h3>
 
-<!-- IFRAME as layout-pane -->
 <iframe class="ui-layout-north" src="/web/back/direct/admin_top.do" longdesc="/web/back/direct/admin_top.do" frameborder="0" scrolling="no"></iframe>
 
-<!-- IFRAME as layout-pane -->
 <iframe class="ui-layout-center" src="/web/back/direct/right.do"  frameborder="0" scrolling="auto"></iframe>
-
-<%--<div class="ui-layout-south">
-    <!-- IFRAME 'filling' a layout-pane -->
-    <iframe src="about:blank" longdesc="http://bing.com" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
-</div>--%>
 
 <div class="ui-layout-west">
     <iframe class="ui-layout-content" src="/web/back/direct/left.do" width="100%" height="100" frameborder="0" scrolling="auto"></iframe>
 </div>
-<%--
-
-<!-- IFRAME as layout-pane -->
-<iframe class="ui-layout-east" src="about:blank" longdesc="http://duckduckgo.com" frameborder="0" scrolling="auto"></iframe>
---%>
 
 </body>
+<script type="text/javascript">
+    var refreshCenterWin = function(url){
+        $(".ui-layout-center").attr("src",url);
+    }
+</script>
 </html>

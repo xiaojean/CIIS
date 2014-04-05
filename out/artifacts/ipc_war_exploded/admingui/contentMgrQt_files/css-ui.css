@@ -1,0 +1,63 @@
+#left {
+	BACKGROUND-POSITION: 50% top; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-IMAGE: url(../images/left_bj_08.gif); BACKGROUND-REPEAT: repeat-x
+}
+#left IMG {
+	MARGIN-TOP: 5px; MARGIN-LEFT: 117px
+}
+#bottom_status_bar_bg {
+	BACKGROUND-POSITION: 50% top; BACKGROUND-IMAGE: url(../images/bottom_left_001.gif); BACKGROUND-REPEAT: repeat-x
+}
+#bottom_dp {
+	BACKGROUND-POSITION: left 50%; BACKGROUND-IMAGE: url(../images/end_dp.gif); BACKGROUND-REPEAT: no-repeat
+}
+.left-border {
+	BORDER-RIGHT: #7c96c7 1px solid; BORDER-TOP: #7c96c7 1px solid; BORDER-LEFT: #7c96c7 1px solid; BORDER-BOTTOM: #7c96c7 1px solid; BACKGROUND-COLOR: #d4e2f2
+}
+#soqi {
+	BACKGROUND-POSITION: 50% top; BACKGROUND-IMAGE: url(../images/soqi_bj.gif); WIDTH: 39px; BACKGROUND-REPEAT: no-repeat
+}
+A.zklm:link {
+	BORDER-RIGHT: #7b93b5 1px solid; MARGIN-TOP: 2px; DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 14px; BORDER-LEFT: #7b93b5 1px solid; WIDTH: 27px; COLOR: #6e8cb3; PADDING-TOP: 130px; FONT-FAMILY: "宋体"; HEIGHT: 212px; BACKGROUND-COLOR: #ccdbef; TEXT-DECORATION: none
+}
+A.zklm:visited {
+	BORDER-RIGHT: #7b93b5 1px solid; MARGIN-TOP: 2px; DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 14px; BORDER-LEFT: #7b93b5 1px solid; WIDTH: 27px; COLOR: #6e8cb3; PADDING-TOP: 130px; FONT-FAMILY: "宋体"; HEIGHT: 212px; BACKGROUND-COLOR: #ccdbef; TEXT-DECORATION: none
+}
+A.zklm:active {
+	BORDER-RIGHT: #7b93b5 1px solid; MARGIN-TOP: 2px; DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 14px; BORDER-LEFT: #7b93b5 1px solid; WIDTH: 27px; COLOR: #6e8cb3; PADDING-TOP: 130px; FONT-FAMILY: "宋体"; HEIGHT: 212px; BACKGROUND-COLOR: #ffe7a2; TEXT-DECORATION: none
+}
+A.zklm:hover {
+	BORDER-RIGHT: #7b93b5 1px solid; MARGIN-TOP: 2px; DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 14px; BORDER-LEFT: #7b93b5 1px solid; WIDTH: 27px; COLOR: #6e8cb3; PADDING-TOP: 130px; FONT-FAMILY: "宋体"; HEIGHT: 212px; BACKGROUND-COLOR: #ffe7a2; TEXT-DECORATION: none
+}
+#left-sxtu {
+	MARGIN-BOTTOM: 5px
+}
+#cheng_gong {
+	BACKGROUND-IMAGE: url(../images/cheng_gong.gif); BACKGROUND-REPEAT: no-repeat
+}
+#shi_bai {
+	BACKGROUND-IMAGE: url(../images/shi_bai.gif); BACKGROUND-REPEAT: no-repeat
+}
+.table-huang {
+	BACKGROUND-COLOR: #fdfdbc
+}
+.ht_left-border {
+	BORDER-RIGHT: #7c96c7 1px solid; BORDER-TOP: #7c96c7 1px solid; BORDER-LEFT: #7c96c7 1px solid; BORDER-BOTTOM: #7c96c7 1px solid; BACKGROUND-COLOR: #ffffff
+}
+#ht_left-img {
+	BACKGROUND-POSITION: 50% top; BACKGROUND-IMAGE: url(../images/left-icon/icon-b_03.gif); MARGIN: 0px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 8px
+}
+.ht_sxlb {
+	MARGIN-TOP: 3px; BACKGROUND-IMAGE: url(../images/sxlb.gif); WIDTH: 78px; MARGIN-RIGHT: 3px; PADDING-TOP: 3px; HEIGHT: 24px
+}
+.ht_sxlb_text {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #3d608b; TEXT-DECORATION: none; font-zamily: "宋体"
+}
+A.ht_sxlb_text:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #3d608b; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.ht_sxlb_text:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #3d608b; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.ht_sxlb_text:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #112c4e; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}

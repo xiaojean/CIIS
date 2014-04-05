@@ -1,5 +1,6 @@
 package com.ciis.base.page;
 
+import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.executor.parameter.ParameterHandler;
 import org.apache.ibatis.executor.statement.RoutingStatementHandler;
 import org.apache.ibatis.executor.statement.StatementHandler;
@@ -14,7 +15,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -36,8 +39,7 @@ import java.util.Properties;
  * 置参数的功能把Sql语句中的参数进行替换，之后再执行查询记录数的Sql语句进行总记录数的统计。
  *
  */
-@Intercepts( {
-        @Signature(method = "prepare", type = StatementHandler.class, args = {Connection.class}) })
+@Intercepts({@Signature(method = "prepare", type = StatementHandler.class, args = {Connection.class})})
 public class PageInterceptor implements Interceptor {
 
     private String databaseType;//数据库类型，不同的数据库有不同的分页方法
@@ -54,7 +56,7 @@ public class PageInterceptor implements Interceptor {
         //PreparedStatementHandler或CallableStatementHandler，在RoutingStatementHandler里面所有StatementHandler接口方法的实现都是调用的delegate对应的方法。
         //我们在PageInterceptor类上已经用@Signature标记了该Interceptor只拦截StatementHandler接口的prepare方法，又因为Mybatis只有在建立RoutingStatementHandler的时候
         //是通过Interceptor的plugin方法进行包裹的，所以我们这里拦截到的目标对象肯定是RoutingStatementHandler对象。
-        RoutingStatementHandler handler = (RoutingStatementHandler) invocation.getTarget();
+        RoutingStatementHandler handler =  (RoutingStatementHandler) invocation.getTarget();
         //通过反射获取到当前RoutingStatementHandler对象的delegate属性
         StatementHandler delegate = (StatementHandler)ReflectUtil.getFieldValue(handler, "delegate");
         //获取到当前StatementHandler的 boundSql，这里不管是调用handler.getBoundSql()还是直接调用delegate.getBoundSql()结果是一样的，因为之前已经说过了
@@ -63,8 +65,8 @@ public class PageInterceptor implements Interceptor {
         //拿到当前绑定Sql的参数对象，就是我们在调用对应的Mapper映射语句时所传入的参数对象
         Object obj = boundSql.getParameterObject();
         //这里我们简单的通过传入的是Page对象就认定它是需要进行分页操作的。
-        if (obj instanceof Page<?>) {
-            Page<?> page = (Page<?>) obj;
+        if (obj instanceof IPage<?>) {
+            IPage<?> page = (IPage<?>) obj;
             //通过反射获取delegate父类BaseStatementHandler的mappedStatement属性
             MappedStatement mappedStatement = (MappedStatement)ReflectUtil.getFieldValue(delegate, "mappedStatement");
             //拦截到的prepare方法参数是一个Connection对象
@@ -72,13 +74,40 @@ public class PageInterceptor implements Interceptor {
             //获取当前要执行的Sql语句，也就是我们直接在Mapper映射语句中写的Sql语句
             String sql = boundSql.getSql();
             //给当前的page参数对象设置总记录数
-            this.setTotalRecord(page,
+            this.setTotalRecord(page,page.getParams(),
                     mappedStatement, connection);
             //获取分页Sql语句
             String pageSql = this.getPageSql(page, sql);
             //利用反射设置当前BoundSql对应的sql属性为我们建立好的分页Sql语句
             ReflectUtil.setFieldValue(boundSql, "sql", pageSql);
+        }else if(obj instanceof MapperMethod.ParamMap){
+            Map<String,Object> param = (MapperMethod.ParamMap)obj;
+            Map<String,Object> paramObj = (Map<String,Object>)param.get("0");
+            IPage<?> page = (IPage<?>) param.get("1");
+            page.setParams(paramObj);
+            //通过反射获取delegate父类BaseStatementHandler的mappedStatement属性
+            MappedStatement mappedStatement = (MappedStatement)ReflectUtil.getFieldValue(delegate, "mappedStatement");
+            //拦截到的prepare方法参数是一个Connection对象
+            Connection connection = (Connection)invocation.getArgs()[0];
+            //获取当前要执行的Sql语句，也就是我们直接在Mapper映射语句中写的Sql语句
+            String sql = boundSql.getSql();
+            //给当前的page参数对象设置总记录数
+            this.setTotalRecord(page,paramObj,
+                    mappedStatement, connection);
+            //获取分页Sql语句
+            String pageSql = this.getPageSql(page, sql);
+            param.clear();
+            param.putAll(paramObj);
+            Iterator<String> keyIt = paramObj.keySet().iterator();
+            while(keyIt.hasNext()){
+                String key = keyIt.next();
+                boundSql.setAdditionalParameter(key,paramObj.get(key));
+            }
+            //利用反射设置当前BoundSql对应的sql属性为我们建立好的分页Sql语句
+            ReflectUtil.setFieldValue(boundSql, "sql", pageSql);
+            ReflectUtil.setFieldValue(boundSql, "parameterObject" ,paramObj );
         }
+
         return invocation.proceed();
     }
 
@@ -105,7 +134,7 @@ public class PageInterceptor implements Interceptor {
      * @param sql 原sql语句
      * @return
      */
-    private String getPageSql(Page<?> page, String sql) {
+    private String getPageSql(IPage<?> page, String sql) {
         StringBuffer sqlBuffer = new StringBuffer(sql);
         if ("mysql".equalsIgnoreCase(databaseType)) {
             return getMysqlPageSql(page, sqlBuffer);
@@ -121,7 +150,7 @@ public class PageInterceptor implements Interceptor {
      * @param sqlBuffer 包含原sql语句的StringBuffer对象
      * @return Mysql数据库分页语句
      */
-    private String getMysqlPageSql(Page<?> page, StringBuffer sqlBuffer) {
+    private String getMysqlPageSql(IPage<?> page, StringBuffer sqlBuffer) {
         //计算第一条记录的位置，Mysql中记录的位置是从0开始的。
         int offset = (page.getPage() - 1) * page.getPageSize();
         sqlBuffer.append(" limit ").append(offset).append(",").append(page.getPageSize());
@@ -134,7 +163,7 @@ public class PageInterceptor implements Interceptor {
      * @param sqlBuffer 包含原sql语句的StringBuffer对象
      * @return Oracle数据库的分页查询语句
      */
-    private String getOraclePageSql(Page<?> page, StringBuffer sqlBuffer) {
+    private String getOraclePageSql(IPage<?> page, StringBuffer sqlBuffer) {
         //计算第一条记录的位置，Oracle分页是通过rownum进行的，而rownum是从1开始的
         int offset = (page.getPage() - 1) * page.getPageSize() + 1;
         sqlBuffer.insert(0, "select u.*, rownum r from (").append(") u where rownum < ").append(offset + page.getPageSize());
@@ -151,7 +180,7 @@ public class PageInterceptor implements Interceptor {
      * @param mappedStatement Mapper映射语句
      * @param connection 当前的数据库连接
      */
-    private void setTotalRecord(Page<?> page,
+    private void setTotalRecord(IPage<?> page,Map<String,Object> params,
                                 MappedStatement mappedStatement, Connection connection) {
         //获取对应的BoundSql，这个BoundSql其实跟我们利用StatementHandler获取到的BoundSql是同一个对象。
         //delegate里面的boundSql也是通过mappedStatement.getBoundSql(paramObj)方法获取到的。
@@ -259,7 +288,7 @@ public class PageInterceptor implements Interceptor {
          * @param fieldValue 目标值
          */
         public static void setFieldValue(Object obj, String fieldName,
-                                         String fieldValue) {
+                                         Object fieldValue) {
             Field field = ReflectUtil.getField(obj, fieldName);
             if (field != null) {
                 try {

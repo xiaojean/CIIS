@@ -5,10 +5,13 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.ciis.test.page.model.User" alias="User"></typeAlias>
+        <typeAlias type="com.ciis.back.module.model.TbSysModule" alias="tbSysModule"></typeAlias>
     </typeAliases>
     <plugins>
         <plugin interceptor="com.ciis.base.page.PageInterceptor">
             <property name="databaseType" value="mysql"/>
         </plugin>
+        <!--<plugin interceptor="com.ciis.base.page.DynamicBindSqlInterceptor">
+        </plugin>-->
     </plugins>
 </configuration>

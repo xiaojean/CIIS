@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="tid">
+		<field-validator type="requiredstring">
+			<message>教师号不能为空</message>
+		</field-validator>
+	</field>
+
+	<field name="tpwd">
+		<field-validator type="requiredstring">
+			<message>密码不能为空</message>
+		</field-validator>
+	</field>
+	<field name="tname">
+		<field-validator type="requiredsting">
+			<message>教师名不能为空</message>
+		</field-validator>
+	</field>
+	<field name="power">
+		<field-validator type="requiredsting">
+			<message>教师权限不能为空</message>
+		</field-validator>
+	</field>
+	<field name="picname">
+		<field-validator type="requiredstring">
+			<message>必须指定上传的图片</message>
+		</field-validator>
+	</field>
+	<!--  
+	<field name="ptime">
+		<field-validator type="required">
+			<message>发布时间不能为空</message>
+		</field-validator>
+	</field>
+	-->
+	<field name="content">
+		<field-validator type="required">
+			<message>内容不能为空</message>
+		</field-validator>
+	</field>
+
+</validators>

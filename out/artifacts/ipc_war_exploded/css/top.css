@@ -1,0 +1,192 @@
+BODY {
+	MARGIN-TOP: 0px; SCROLLBAR-FACE-COLOR: #dbe0ef; MARGIN-LEFT: 0px; SCROLLBAR-SHADOW-COLOR: #9393c6; MARGIN-RIGHT: 0px; SCROLLBAR-ARROW-COLOR: #9393c6; SCROLLBAR-TRACK-COLOR: #d0d7ef
+}
+.sbttn {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BACKGROUND: #d0d7ef; BORDER-LEFT: #133580 1px solid; CURSOR: hand; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.minbttn {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BACKGROUND: #d0d7ef; BORDER-LEFT: #133580 1px solid; WIDTH: 15px; CURSOR: hand; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 18px; TEXT-DECORATION: none
+}
+.tex {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 121px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.jsxxinput {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; WIDTH: 100px; COLOR: #3c3c68; BORDER-BOTTOM: #3c3c68 1px solid; HEIGHT: 19px; BACKGROUND-COLOR: #d0d7ef; TEXT-DECORATION: none
+}
+即时信息样式 .tex0 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 80px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tex1 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 200px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tex2 {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BORDER-LEFT: #133580 1px solid; WIDTH: 20px; COLOR: #000099; BORDER-BOTTOM: #000000 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tex3 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 300px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tex6 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 60px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tex7 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 200px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.drpdwn {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BORDER-LEFT: #133580 1px solid; WIDTH: 200px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid
+}
+.drpdwn2 {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BORDER-LEFT: #133580 1px solid; WIDTH: 350px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid
+}
+.tes0 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 95%; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tes1 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 95%; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tes2 {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BACKGROUND: #d0d7ef; BORDER-LEFT: #133580 1px solid; WIDTH: 95%; COLOR: #000099; BORDER-BOTTOM: #000000 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.tes3 {
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 95%; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+长下划线文本框 .drpdwns {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BORDER-LEFT: #133580 1px solid; WIDTH: 95%; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid
+}
+TABLE.bg {
+	BORDER-RIGHT: #58a3cb 1px solid; BORDER-TOP: #58a3cb 1px solid; BORDER-LEFT: #58a3cb 1px solid; BORDER-BOTTOM: #58a3cb 1px solid; BACKGROUND-COLOR: #eeeeee
+}
+.jsxxtext {
+	BORDER-RIGHT: #133580 1px solid; BORDER-TOP: #133580 1px solid; BORDER-LEFT: #133580 1px solid; WIDTH: 300px; COLOR: #000099; BORDER-BOTTOM: #133580 1px solid; BACKGROUND-COLOR: #eef1fd
+}
+.search {
+	WIDTH: 100px; TEXT-DECORATION: none
+}
+.search1 {
+	WIDTH: 100px; TEXT-DECORATION: none
+}
+A {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+BODY {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+INPUT {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+OPTION {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+SELECT {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+TABLE {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+TD {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+TR {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18px; FONT-FAMILY: "宋体", "MS SONG", "SimSun", "tahoma", "sans-serif"
+}
+A:link {
+	COLOR: #000099; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000099; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #000099; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+.title2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #000000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 4px; TEXT-DECORATION: none
+}
+.main_title {
+	BACKGROUND-IMAGE: url(title_top_line.gif); HEIGHT: 23px
+}
+.toptr {
+	BACKGROUND-IMAGE: url(title_top_line1.gif); HEIGHT: 16px
+}
+.toptr2 {
+	BACKGROUND-IMAGE: url(title_top_line2.gif); HEIGHT: 30px
+}
+.toptr3 {
+	HEIGHT: 17px; BACKGROUND-COLOR: #ffffff
+}
+.buttonClose {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_close.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px; align: center
+}
+.buttonAdd {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_add.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px; align: center
+}
+.buttonMake {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_make.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonDel {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_del.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonDestroy {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_destroy.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonPrint {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_print.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonPrintSet {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_printset.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonSearch {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_search.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px; value: ''
+}
+.buttonSave {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_save.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonOk {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_ok.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonSend {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_send.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonSpeak {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_speak.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonCalendar {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_calendar.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonReset {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_reset.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonBack {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_back.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonSet {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_set.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonOther {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_other.gif); BORDER-LEFT: 0px; WIDTH: 60px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 25px
+}
+.buttonGo {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(function_go.gif); BORDER-LEFT: 0px; WIDTH: 34px; CURSOR: hand; BORDER-BOTTOM: 0px; HEIGHT: 18px; value: ''
+}
+.buttonLine {
+	BACKGROUND-IMAGE: url(function_line.gif); WIDTH: 10px; HEIGHT: 25px
+}
+.tab_back {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(title_top_line3.gif); BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: 0px; HEIGHT: 32px; cellpadding: 0; cellspacing: 0
+}
+.tab_left {
+	BACKGROUND-IMAGE: url(menu_button_left.gif); WIDTH: 39px; HEIGHT: 25px
+}
+.tab_on {
+	BACKGROUND-IMAGE: url(menu_button_bg.gif); WIDTH: 60px
+}
+.tab_middle {
+	BACKGROUND-IMAGE: url(menu_button_mid.gif); WIDTH: 37px; HEIGHT: 25px
+}
+.tab_right {
+	BACKGROUND-IMAGE: url(menu_button_right.gif); WIDTH: 8px; HEIGHT: 25px
+}
+.table_tool {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(title_top_line2.gif); BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: 0px; HEIGHT: 30px; cellpadding: 0; cellspacing: 0; id: msglistcntrl
+}

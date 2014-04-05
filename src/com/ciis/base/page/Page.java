@@ -12,10 +12,10 @@ import java.util.Map;
 /**
  * 对分页的基本数据进行一个简单的封装
  */
-public class Page<T> {
+public class Page<T> implements IPage<T> {
 
     private int page = 1;//页码，默认是第一页
-    private int pageSize = 15;//每页显示的记录数，默认是15
+    private int pageSize = 10;//每页显示的记录数，默认是15
     private int records;//总记录数
     private int total;//总页数
     private List<T> rows;//对应的当前页记录
@@ -80,6 +80,17 @@ public class Page<T> {
                 ", totalPage=").append(total).append(
                 ", records=").append(records).append("]");
         return builder.toString();
+    }
+
+
+    @Override
+    public boolean isFirstPage() {
+        return page == 0;
+    }
+
+    @Override
+    public boolean isLastPage() {
+        return page == pageSize - 1;
     }
 
 }

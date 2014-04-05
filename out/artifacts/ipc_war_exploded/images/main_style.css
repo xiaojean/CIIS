@@ -1,0 +1,16 @@
+.right-block-list-bg{
+	background:url(fjwj_21.gif) repeat-y;
+	margin:0px;
+}
+.text {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.text UL {
+	
+}
+.text UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(line_2.gif) repeat-x 50% bottom; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+.text UL LI A {
+	PADDING-LEFT: 0px; BACKGROUND: url(biao_01.jpg) no-repeat left 50%; FLOAT: left; TEXT-DECORATION: none
+}
